@@ -87,16 +87,16 @@ public class Streams {
          * HINT: You will need to create a new class for this.
          */
 
-//        Supplier<Integer> fibSupp = new Fibonacci();
-//        Stream<Integer> s6 = Stream.generate(fibSupp).limit(10).collect(Collectors.toList());
-//        s6.forEach(System.out::println);
-
-        Fibonacci fibonacci = new Fibonacci();
-        List<Integer> listFibo = fibonacci.generate(10);
-        System.out.println(listFibo);
-
-        Stream<List<Integer>> s6 = Arrays.asList(listFibo).stream();
+        Supplier<Integer> fibSupp = new Fibonacci();
+        Stream<Integer> s6 = Stream.generate(fibSupp).limit(10);
         s6.forEach(System.out::println);
+
+//        Fibonacci fibonacci = new Fibonacci();
+//        List<Integer> listFibo = fibonacci.generate(10);
+//        System.out.println(listFibo);
+//
+//        Stream<List<Integer>> s6 = Arrays.asList(listFibo).stream();
+//        s6.forEach(System.out::println);
 
 
     }
